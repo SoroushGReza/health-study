@@ -49,13 +49,14 @@ Minst tre grafer (krav uppfyllt):
 ## 📊 Visualiseringar (bilder)
 
 ### Histogram över systoliskt blodtryck
-![Histogram Blood Pressure](images/histogram_bp.png)
+<img src="./images/histogram_bp.png" width="400">
 
 ### Vikt per kön (boxplot)
-![Boxplot Weight by Sex](images/boxplot_weight_sex.png)
+<img src="./images/boxplot_weight_sex.png" width="400">
 
 ### Andel rökare
-![Smoker Barplot](images/smokers_barplot.png)
+<img src="./images/smokers_barplot.png" width="400">
+
 
 
 ### ✔️ Simulering
