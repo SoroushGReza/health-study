@@ -93,3 +93,24 @@ För att notebooken ska köras identiskt:
   ```python
   import numpy as np
   np.random.seed(42)
+  ```
+---
+ ## 🛠 Teknisk miljö
+
+- Python-version: 3.11
+
+**Miljö**: 
+Virtuell miljö .venv (exkluderad via .gitignore)
+
+**Editor**: 
+Visual Studio Code
+
+**Bibliotek**:
+
+- numpy
+- pandas
+- matplotlib
+- seaborn
+- scipy
+- scikit-learn
+- jupyter
