@@ -13,10 +13,22 @@ health-study/
 ├── data/
 │   └── health_study_dataset.csv
 │
+├── images/
+│   ├── histogram_bp.png
+│   ├── boxplot_weight_sex.png
+│   ├── smokers_barplot.png
+│   ├── regression_pred_vs_actual.png
+│   └── disease_by_sex.png
+│
 ├── notebooks/
 │   ├── health_study_del1.ipynb
+│   ├── health_study_del2.ipynb
 │
-├── src/                         (Del 2 – funktioner & klasser)
+├── src/   
+│   ├── data_loading.py
+│   ├── statistics.py
+│   ├── visualization.py
+│   └── health_analyzer.py
 │
 ├── requirements.txt
 ├── .gitignore
@@ -84,6 +96,48 @@ Simulering av 1000 studier för att uppskatta testets power:
 
 ---
 
+
+## 🧬 Del 2 – Fördjupning & Pipeline
+
+Notebook:  
+`notebooks/health_study_del2.ipynb`
+
+Del 2 innehåller:
+
+### ✔️ Kodstrukturering
+- Koden från del 1 har flyttats till separata moduler i `src/`:
+  - `data_loading.py`
+  - `statistics.py`
+  - `visualization.py`
+  - `health_analyzer.py`
+
+### ✔️ HealthAnalyzer-klass
+En objektorienterad klass som:
+- hanterar beskrivande statistik  
+- ritar visualiseringar  
+- utför multipel linjär regression  
+- genererar diagnostiska grafer  
+- ger en grund för vidare analyser
+
+### ✔️ Multipel linjär regression
+Blodtryck modelleras som funktion av både ålder och vikt.  
+Regressionen bygger på linjär algebra:  
+\[
+\hat{\beta} = (X^TX)^{-1}X^Ty
+\]
+
+### ✔️ Diagnostisk visualisering
+Plottet nedan jämför observerat vs. förutsagt blodtryck:
+
+<img src="./images/regression_pred_vs_actual.png" width="400">
+
+### ✔️ Extra analys: sjukdomsförekomst per kön
+Visar hur vanligt sjukdomen är bland kvinnor och män:
+
+<img src="./images/disease_by_sex.png" width="400">
+
+---
+
 ## 🔄 Reproducerbarhet
 
 För att notebooken ska köras identiskt:
@@ -108,6 +162,7 @@ Visual Studio Code
 
 **Bibliotek**:
 
+- dataclasses
 - numpy
 - pandas
 - matplotlib
